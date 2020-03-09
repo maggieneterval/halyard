@@ -33,10 +33,10 @@ public class DockerRegistryAccount extends Account {
   @Secret private String password;
   private String passwordCommand;
   private String email;
-  private Long cacheIntervalSeconds = 30L;
-  private Long clientTimeoutMillis = 60_000L;
-  private int cacheThreads = 1;
-  private int paginateSize = 100;
+  private Long cacheIntervalSeconds;
+  private Long clientTimeoutMillis;
+  private int cacheThreads;
+  private int paginateSize;
   private Boolean sortTagsByDate = false;
   private Boolean trackDigests = false;
   private Boolean insecureRegistry = false;
