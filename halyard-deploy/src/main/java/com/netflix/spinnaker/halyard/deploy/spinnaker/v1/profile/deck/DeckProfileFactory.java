@@ -126,7 +126,10 @@ public class DeckProfileFactory extends RegistryBackedProfileFactory {
             features.getArtifactsRewrite() != null ? features.getArtifactsRewrite() : false));
     bindings.put(
         "features.mineCanary",
-        Boolean.toString(features.getMineCanary() != null ? features.getMineCanary() : false));
+        Boolean.toString(
+            deploymentConfiguration.getCanary().getEnabled() != null
+                ? deploymentConfiguration.getCanary().getEnabled()
+                : false));
     bindings.put(
         "features.managedPipelineTemplatesV2UI",
         Boolean.toString(

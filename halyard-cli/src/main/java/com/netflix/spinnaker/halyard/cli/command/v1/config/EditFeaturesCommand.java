@@ -64,14 +64,6 @@ public class EditFeaturesCommand extends AbstractConfigCommand {
   private Boolean artifactsRewrite = null;
 
   @Parameter(
-      names = "--mine-canary",
-      description =
-          "Enable canary support. For this to work, you'll need a canary judge configured. "
-              + "Currently, Halyard does not configure canary judge for you.",
-      arity = 1)
-  private Boolean mineCanary = null;
-
-  @Parameter(
       names = "--managed-pipeline-templates-v2-ui",
       description = "Enable managed pipeline templates v2 UI support.",
       arity = 1)
@@ -101,7 +93,6 @@ public class EditFeaturesCommand extends AbstractConfigCommand {
     features.setArtifacts(artifacts != null ? artifacts : features.getArtifacts());
     features.setArtifactsRewrite(
         artifactsRewrite != null ? artifactsRewrite : features.getArtifactsRewrite());
-    features.setMineCanary(mineCanary != null ? mineCanary : features.getMineCanary());
     features.setManagedPipelineTemplatesV2UI(
         managedPipelineTemplatesV2UI != null
             ? managedPipelineTemplatesV2UI

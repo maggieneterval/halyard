@@ -27,7 +27,8 @@ import lombok.EqualsAndHashCode;
   "appengineContainerImageUrlDeployments",
   "auth",
   "entityTags",
-  "fiat"
+  "fiat",
+  "mineCanary"
 })
 public class Features extends Node {
   @Override
@@ -61,12 +62,6 @@ public class Features extends Node {
       tooLowMessage = "The artifacts rewrite UI is not configurable prior to this release.",
       tooHighMessage = "The artifacts rewrite UI is now enabled by default.")
   private Boolean artifactsRewrite;
-
-  @ValidForSpinnakerVersion(
-      lowerBound = "1.5.0",
-      tooLowMessage =
-          "Canary is not configurable prior to this release. Will be stable at a later release.")
-  private Boolean mineCanary;
 
   @ValidForSpinnakerVersion(
       lowerBound = "1.7.0",
